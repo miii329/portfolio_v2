@@ -26,6 +26,12 @@
   position: relative;
   width: 168px;
   height: 100px;
+  flex-shrink: 0;
+}
+
+.news_wrapper {
+  flex: 1;
+  min-width: 0;
 }
 
 .news_wrapper dd + dd {
