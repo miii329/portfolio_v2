@@ -43,8 +43,8 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  width: clamp(220px, 24vw, 360px);
-  height: clamp(180px, 18vw, 260px);
+  width: clamp(220px, 24vw, 270px);
+  height: clamp(180px, 18vw, 200px);
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 2.5px 40px 0 rgba(16, 33, 100, 0.08);
