@@ -7,6 +7,7 @@ import NewsList from "./components/NewsList";
 import { TOP_NEWS_LIMIT } from "./constants";
 import { getNewsList } from "./libs/microcms";
 import ButtonLink from "./components/ButtonLink";
+import ClientList from "./components/ClientList";
 import SlideIn from "./components/SlideIn";
 import SplitText from "./components/SplitText";
 import { ArrowRight } from "lucide-react";
@@ -144,6 +145,20 @@ export default async function Home() {
               </div>
             </SlideIn>
           </section>
+        </div>
+
+        <div className="bg-black">
+          <SlideIn>
+            <section className={`inner ${styles.clients} pt-[160px]!`}>
+              <h2
+                className={`section_title leading-none pb-[16px]! ${barlowCondensed.className}`}
+              >
+                SELECTED CLIENTS
+              </h2>
+              <h3>お取引・協業実績</h3>
+              <ClientList />
+            </section>
+          </SlideIn>
         </div>
 
         <div className="bg-black">
