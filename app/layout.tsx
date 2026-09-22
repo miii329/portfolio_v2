@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "_bgzq202Ra_igJHx2CRSsaqD2IAhTnk3W_C2ynGB4cM",
+  },
   metadataBase: new URL("https://visionary-mate.vercel.app"),
   title: {
     default: "Visionary Mate",
