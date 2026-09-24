@@ -2,8 +2,8 @@ import styles from "./page.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Barlow_Condensed } from "next/font/google";
-import Image from "next/image";
 import SlideIn from "../components/SlideIn";
+import SkillIcon from "../components/SkillIcon";
 
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
@@ -18,217 +18,115 @@ export default function page() {
       <section className={styles.aboutme}>
         <div className={`inner ${styles.aboutme_content}`}>
           <SlideIn>
-          <h2
-            className={`${styles.aboutme_title} ${barlowCondensed.className}`}
-          >
-            About me
-          </h2>
+            <h2
+              className={`${styles.aboutme_title} ${barlowCondensed.className}`}
+            >
+              About me
+            </h2>
           </SlideIn>
 
           <SlideIn delay={0.8}>
             <div className={styles.skills}>
               <SlideIn delay={1.2}>
                 <h3 className={`text-[50px]! ${barlowCondensed.className}`}>
-                Skill
-              </h3>
-                  <p className="mb-[30px]!">以下、私のスキルセットです。</p>
+                  Skill
+                </h3>
+                <p>以下、私のスキルセットです。</p>
+                <p>サイト制作は、Nuxt + microCMSの構成を推してます。</p>
+                <p className="mb-[30px]!">もっぱらJAMstack構成推しです。</p>
               </SlideIn>
               <SlideIn as="dl" className={styles.skill_section} delay={1.3}>
                 <dt className={barlowCondensed.className}>Design</dt>
-              <dd>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/Figma.png"
+                <dd>
+                  <SkillIcon
+                    src="/image/skill/Figma.png"
                     alt="Figma"
                     width={40}
-                    height={0}
-                    style={{ height: "auto" }}
                   />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/illustrator.png"
+                  <SkillIcon
+                    src="/image/skill/illustrator.png"
                     alt="Illustrator"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
                   />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/photoshop.png"
-                    alt="Photoshop"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
+                  <SkillIcon src="/image/skill/photoshop.png" alt="Photoshop" />
+                </dd>
+              </SlideIn>
+              <SlideIn as="dl" className={styles.skill_section} delay={1.4}>
+                <dt className={barlowCondensed.className}>Development</dt>
+                <dd>
+                  <SkillIcon src="/image/skill/html.png" alt="HTML" />
+                  <SkillIcon src="/image/skill/css.png" alt="CSS" />
+                  <SkillIcon src="/image/skill/js.png" alt="JavaScript" />
+                  <SkillIcon
+                    src="/image/skill/typescript.png"
+                    alt="TypeScript"
+                    width={38}
                   />
-                </span>
-              </dd>
-            </SlideIn>
-            <SlideIn as="dl" className={styles.skill_section} delay={1.4}>
-              <dt className={barlowCondensed.className}>Development</dt>
-              <dd>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/html.png"
-                    alt="HTML"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
+                  <SkillIcon src="/image/skill/react.svg" alt="React" />
+                  <SkillIcon src="/image/skill/nextjs.png" alt="Next.js" />
+                  <SkillIcon src="/image/skill/vue.js.png" alt="Vue.js" />
+                  <SkillIcon
+                    src="/image/skill/nuxt.png"
+                    alt="Nuxt.js"
+                    width={56}
                   />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/css.png"
-                    alt="CSS"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/js.png"
-                    alt="JavaScript"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/nextjs.png"
-                    alt="Next.js"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/angular.png"
-                    alt="Angular"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/astro.png"
+                  <SkillIcon src="/image/skill/angular.png" alt="Angular" />
+                  <SkillIcon
+                    src="/image/skill/astro.png"
                     alt="Astro"
                     width={40}
-                    height={0}
-                    style={{ height: "auto" }}
                   />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/php.png"
-                    alt="PHP"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/ruby.png"
-                    alt="Ruby on Rails"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/mysql.png"
-                    alt="MySQL"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/elephant.png"
-                    alt="PostgreSQL"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/neon.png"
-                    alt="Neon"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/vercel.png"
-                    alt="Vercel"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/Wordpress.png"
-                    alt="WordPress"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
-                  />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/microCMS.png"
+                  <SkillIcon src="/image/skill/php.png" alt="PHP" />
+                  <SkillIcon src="/image/skill/ruby.png" alt="Ruby on Rails" />
+                  <SkillIcon src="/image/skill/mysql.png" alt="MySQL" />
+                  <SkillIcon src="/image/skill/elephant.png" alt="PostgreSQL" />
+                  <SkillIcon src="/image/skill/neon.png" alt="Neon" />
+                  <SkillIcon src="/image/skill/vercel.png" alt="Vercel" />
+                  <SkillIcon src="/image/skill/Wordpress.png" alt="WordPress" />
+                  <SkillIcon
+                    src="/image/skill/microCMS.png"
                     alt="microCMS"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
+                    width={44}
                   />
-                </span>
-              </dd>
-            </SlideIn>
-            <SlideIn as="dl" className={styles.skill_section} delay={1.5}>
-              <dt className={barlowCondensed.className}>Tool</dt>
-              <dd>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/vscode.png"
+                  <SkillIcon src="/image/skill/shopify.png" alt="Shopify" />
+                </dd>
+              </SlideIn>
+              <SlideIn as="dl" className={styles.skill_section} delay={1.5}>
+                <dt className={barlowCondensed.className}>Tool</dt>
+                <dd>
+                  <SkillIcon
+                    src="/image/skill/vscode.png"
                     alt="Visual Studio Code"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
                   />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/docker.png"
-                    alt="Docker"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
+                  <SkillIcon src="/image/skill/docker.png" alt="Docker" />
+                  <SkillIcon src="/image/skill/Github.png" alt="GitHub" />
+                  <SkillIcon
+                    src="/image/skill/chatgpt.png"
+                    alt="ChatGPT"
+                    width={60}
                   />
-                </span>
-                <span className={styles.icon}>
-                  <Image
-                    src="/image/Github.png"
-                    alt="GitHub"
-                    width={50}
-                    height={0}
-                    style={{ height: "auto" }}
+                  <SkillIcon
+                    src="/image/skill/githubcopilot.svg"
+                    alt="GitHub Copilot"
+                    width={40}
                   />
-                </span>
-              </dd>
-            </SlideIn>
-          </div>
+                </dd>
+              </SlideIn>
+              <SlideIn as="dl" className={styles.skill_section} delay={1.3}>
+                <dt className={barlowCondensed.className}>Marketing</dt>
+                <dd>
+                  <SkillIcon
+                    src="/image/skill/googleanalytics.png"
+                    alt="Google Analytics"
+                    width={40}
+                  />
+                  <SkillIcon
+                    src="/image/skill/googlesearchconsole.png"
+                    alt="Google Search Console"
+                  />
+                  <SkillIcon src="/image/skill/hubspot.png" alt="HubSpot" />
+                </dd>
+              </SlideIn>
+            </div>
           </SlideIn>
         </div>
       </section>

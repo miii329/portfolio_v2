@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./index.module.css";
+import type { CSSProperties } from "react";
 
 type Client = {
   name: string;
@@ -7,6 +8,7 @@ type Client = {
   width?: number;
   height?: number;
   shadow?: boolean;
+  style?: CSSProperties;
 };
 
 const clients: Client[] = [
@@ -41,6 +43,13 @@ const clients: Client[] = [
     height: 200,
   },
   {
+    name: "ANIMEK",
+    src: "/image/clients/animek.png",
+    width: 300,
+    height: 200,
+    style: { padding: "10px" },
+  },
+  {
     name: "株式会社イノベイティア",
     src: "/image/clients/innovatia.svg",
     width: 300,
@@ -63,6 +72,7 @@ export default function ClientList() {
               width={client.width ?? 300}
               height={client.height ?? 200}
               className={`${styles.clients_image} ${client.shadow ? styles.shadowed : ""}`}
+              style={client.style}
             />
           </li>
         ))}
