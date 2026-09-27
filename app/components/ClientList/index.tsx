@@ -8,7 +8,7 @@ type Client = {
   width?: number;
   height?: number;
   shadow?: boolean;
-  style?: CSSProperties;
+  padding?: string;
 };
 
 const clients: Client[] = [
@@ -17,6 +17,7 @@ const clients: Client[] = [
     src: "/image/clients/tk.webp",
     width: 300,
     height: 200,
+    padding: "4px",
   },
   {
     name: "株式会社spreadwith",
@@ -47,7 +48,7 @@ const clients: Client[] = [
     src: "/image/clients/animek.png",
     width: 300,
     height: 200,
-    style: { padding: "10px" },
+    padding: "60px",
   },
   {
     name: "株式会社イノベイティア",
@@ -65,14 +66,17 @@ export default function ClientList() {
     <div className={styles.marquee} aria-label="Client list marquee">
       <ul className={styles.clients_list}>
         {marqueeClients.map((client, index) => (
-          <li key={`${client.name}-${index}`} className={styles.clients_item}>
+          <li
+            key={`${client.name}-${index}`}
+            className={styles.clients_item}
+            style={{ padding: client.padding ?? "50px" }}
+          >
             <Image
               src={client.src}
               alt={client.name}
               width={client.width ?? 300}
               height={client.height ?? 200}
               className={`${styles.clients_image} ${client.shadow ? styles.shadowed : ""}`}
-              style={client.style}
             />
           </li>
         ))}
