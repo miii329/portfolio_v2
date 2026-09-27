@@ -120,10 +120,14 @@
 
 .concept_content {
   display: flex;
-  gap: 15%;
+  gap: 8%;
   p {
     margin-top: 25px;
   }
+}
+
+.concept_content_right {
+  width: 40%;
 }
 
 /* aboutme */
@@ -133,10 +137,14 @@
 
 .aboutme_content {
   display: flex;
-  gap: 15%;
+  gap: 8%;
   p {
     margin-top: 25px;
   }
+}
+
+.aboutme_content_left {
+  width: 40%;
 }
 
 /* service */
@@ -186,6 +194,7 @@
   .concept_content_right {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   /* aboutme */
@@ -197,6 +206,7 @@
   .aboutme_content_left {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   /* service */
