@@ -51,6 +51,12 @@
   padding: 50px;
 }
 
+@media (max-width: 767px) {
+  .clients_item {
+    padding: 20px !important;
+  }
+}
+
 .clients_image {
   display: block;
   max-width: 100%;
