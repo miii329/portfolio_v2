@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import styles from "./page.module.css";
@@ -17,6 +18,41 @@ type Props = {
     slug: string;
   }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const work = await getWorksDetail(slug);
+  const imageUrl =
+    work.workImage?.url ?? "https://visionary-mate.vercel.app/image/ogp.png";
+  const description =
+    work.summary ?? `${work.title} | Visionary Mate`;
+
+  return {
+    title: work.title,
+    description,
+    openGraph: {
+      title: work.title,
+      description,
+      url: `https://visionary-mate.vercel.app/works/${slug}`,
+      images: [
+        {
+          url: imageUrl,
+          width: work.workImage?.width ?? 1200,
+          height: work.workImage?.height ?? 630,
+          alt: work.title,
+        },
+      ],
+      locale: "ja_JP",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: work.title,
+      description,
+      images: [imageUrl],
+    },
+  };
+}
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
